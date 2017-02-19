@@ -324,7 +324,7 @@ var ai_pos;
       return $(".messages").append("<div class='message'><div class='bot'>" + msg + "</div></div>");
     },
     get_gif: function(keyword) {
-      return $.get("//api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=" + this.api_key, function(data) {
+      return $.get("https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=" + this.api_key, function(data) {
         var index;
         if (data.data.length === 0) {
           return app.bot_post("Sorry I can't find any gif for that :(");
